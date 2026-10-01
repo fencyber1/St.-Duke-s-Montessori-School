@@ -1887,9 +1887,6 @@ table.fees tbody td:first-child { font-weight: 700; color: var(--navy-800); }
   .split-media::before { display: none; }
   .count-box { min-width: 72px; }
 }
-isplay: none; }
-  .count-box { min-width: 72px; }
-}
 
 /* ==========================================================================
    v2 — Kingster-style redesign: navy + green, squared classic UI
@@ -2144,3 +2141,78 @@ input, select, textarea,
 .form-field input:focus, .form-field select:focus, .form-field textarea:focus { box-shadow: 0 0 0 4px rgba(var(--accent-rgb), .15); }
 .newsletter-form input:focus { box-shadow: 0 0 0 4px rgba(var(--accent-rgb), .15); }
 .cta-band .cta-note .icon { color: #7cc793; }
+
+/* ==========================================================================
+   v3 — SHARP FLAT COLOR: no blur, no glass, no soft gradients
+   ========================================================================== */
+
+:root {
+  --red: #2fa84f;          /* vivid primary green (buttons, links, accents) */
+  --red-dark: #1f8a3c;
+  --green: #2fa84f;
+  --gold: #2fa84f;         /* accent slots reuse the same sharp green */
+  --gold-soft: #5ec477;
+}
+
+/* Remove every blur / glass effect */
+.site-header { backdrop-filter: none; -webkit-backdrop-filter: none; background: #ffffff; }
+.program-age { backdrop-filter: none; -webkit-backdrop-filter: none; background: var(--navy-900); }
+
+/* Solid dark sections — no gradient glows, no dot veils */
+.section-navy { background: var(--navy-900); }
+.page-hero { background: var(--navy-900); }
+.page-hero::before { display: none; }
+.cta-band { background: var(--navy-900); }
+.cta-band::after { display: none; }
+.apply-panel { background: var(--panel); }
+.apply-panel::before { display: none; }
+.about-band { background: var(--navy-950); }
+.navy-features { background: var(--navy-900); }
+.hero-v2::before { background: linear-gradient(90deg, rgba(11, 19, 40, .92) 0%, rgba(11, 19, 40, .7) 45%, rgba(11, 19, 40, .42) 78%); }
+
+/* Solid component fills */
+.step-num { background: var(--red); color: #fff; box-shadow: none; }
+.quote-mark { background: var(--red); color: #fff; box-shadow: none; }
+.chat-fab { background: var(--red); box-shadow: 0 10px 24px rgba(14, 28, 56, .3); }
+.chat-fab .icon { color: #fff; }
+.chat-fab:hover { color: #fff; background: var(--red-dark); }
+.chat-ava { background: var(--gold-soft); }
+.fc-rating .fc-icon, .fc-spots .fc-icon { background: var(--red); }
+.feature-icon { background: #eaf6ee; border-color: #c4e2cd; border-radius: 8px; }
+.btn-gold { background: var(--red); color: #fff; }
+.btn-red, .btn-red:hover { box-shadow: none; }
+.btn-red:hover { background: var(--red-dark); }
+.timeline-item::before { background: var(--red); box-shadow: 0 0 0 3px var(--red); border-color: #eaf6ee; }
+.timeline::before { background: var(--red); }
+.event-date { background: var(--navy-900); }
+.split-badge { background: var(--navy-900); }
+.pd-age, .news-date { background: var(--red); color: #fff; }
+.stat-card { background: transparent; border: 1px solid rgba(255, 255, 255, .22); border-radius: 4px; }
+.feature-card:hover, .program-card:hover, .story-card:hover, .news-card:hover,
+.team-card:hover, .info-card:hover, .value-card:hover, .event-item:hover { box-shadow: 0 4px 0 var(--red), var(--shadow-sm); }
+
+/* Crisp, tight shadows — no soft blur wash */
+:root {
+  --shadow-sm: 0 2px 4px rgba(14, 28, 56, .12);
+  --shadow: 0 6px 16px rgba(14, 28, 56, .14);
+  --shadow-lg: 0 12px 28px rgba(14, 28, 56, .16);
+}
+
+/* Solid, distinct avatar hues */
+.avatar-1 { background: #16386e; }
+.avatar-2 { background: #2fa84f; }
+.avatar-3 { background: #1f7d3a; }
+.avatar-4 { background: #b4541e; }
+.avatar-5 { background: #6b3fa0; }
+.avatar-6 { background: #117a8c; }
+
+/* Solid brand/system bits */
+.accred-item .accred-crest { border-color: var(--red); color: var(--gold-soft); background: transparent; }
+.chat-quick button:hover { background: var(--red); border-color: var(--red); color: #fff; }
+.socials a:hover { background: var(--red); border-color: var(--red); color: #fff; }
+.back-to-top:hover { background: var(--red); color: #fff; }
+.call-fab { background: var(--red); animation: none; box-shadow: 0 10px 24px rgba(14, 28, 56, .3); }
+.quick-item:hover { background: #f2f9f4; }
+.mini-badge, .chip { border-radius: 3px; }
+.urgency-pill { box-shadow: none; }
+.hero-badge { background: var(--navy-800); border-color: var(--navy-800); }
